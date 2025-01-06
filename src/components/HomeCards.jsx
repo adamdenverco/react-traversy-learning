@@ -11,7 +11,10 @@ const HomeCards = ({ children }) => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-lg">
 
-                <Card
+            {/* https://www.youtube.com/watch?v=LDB4uaJ87e0&t=154s
+                leave off at 54:06 */}
+
+                {/* <Card
                     cardBackgroundColor='bg-gray-100'
                     cardTitle='For Developers'
                     cardText='Browse our React jobs and start your career today'
@@ -19,9 +22,9 @@ const HomeCards = ({ children }) => {
                     buttonColor='bg-black'
                     buttonColorHover='bg-gray-700'
                     buttonUrl='/jobs.html'
-                />
+                /> */}
 
-                <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+                <Card>
                     <h2 className="text-2xl font-bold">For Developers</h2>
                     <p className="mt-2 mb-4">
                         Browse our React jobs and start your career today
@@ -32,7 +35,10 @@ const HomeCards = ({ children }) => {
                     >
                     Browse Jobs
                     </a>
-                </div>
+                </Card>
+
+                {/* <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+                </div> */}
 
                 <div className="bg-indigo-100 p-6 rounded-lg shadow-md">
                     <h2 className="text-2xl font-bold">For Employers</h2>

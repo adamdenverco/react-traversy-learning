@@ -12,7 +12,8 @@ const HomeCards = ({ children }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-lg">
 
             {/* https://www.youtube.com/watch?v=LDB4uaJ87e0&t=154s
-                leave off at 54:06 */}
+                leave off at 54:06 */
+                }
 
                 {/* <Card
                     cardBackgroundColor='bg-gray-100'

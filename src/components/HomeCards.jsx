@@ -11,8 +11,8 @@ const HomeCards = ({ children }) => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-lg">
 
-            {/* https://www.youtube.com/watch?v=LDB4uaJ87e0&t=154s
-                leave off at 54:06 */
+                {/* https://www.youtube.com/watch?v=LDB4uaJ87e0&t=154s
+                leave off at 55:43 */
                 }
 
                 {/* <Card
@@ -28,7 +28,7 @@ const HomeCards = ({ children }) => {
                 <Card>
                     <h2 className="text-2xl font-bold">For Developers</h2>
                     <p className="mt-2 mb-4">
-                        Browse our React jobs and start your career today
+                        111 Browse our React jobs and start your career today
                     </p>
                     <a
                     href="/jobs.html"
@@ -41,7 +41,7 @@ const HomeCards = ({ children }) => {
                 {/* <div className="bg-gray-100 p-6 rounded-lg shadow-md">
                 </div> */}
 
-                <div className="bg-indigo-100 p-6 rounded-lg shadow-md">
+                <Card cardBackgroundColor="bg-indigo-100">
                     <h2 className="text-2xl font-bold">For Employers</h2>
                     <p className="mt-2 mb-4">
                     List your job to find the perfect developer for the role
@@ -52,7 +52,11 @@ const HomeCards = ({ children }) => {
                     >
                     Add Job
                     </a>
-                </div>
+
+                </Card>
+
+                {/* <div className="bg-indigo-100 p-6 rounded-lg shadow-md">
+                </div> */}
 
             </div>
         </div>

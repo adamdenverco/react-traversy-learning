@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage";
 import AboutUsPage from "./pages/AboutUsPage";
 import JobsPage from "./pages/JobsPage";
 import JobPage from "./pages/JobPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 {
     /* https://www.youtube.com/watch?v=LDB4uaJ87e0&t=154s
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
             <Route path="/about" element={<AboutUsPage />} />
             <Route path="/jobs" element={<JobsPage />} />
             <Route path="/job" element={<JobPage />} />
+            <Route path="*" element={<NotFoundPage />} />
         </Route>
     )
 );

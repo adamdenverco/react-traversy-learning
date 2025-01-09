@@ -1,7 +1,7 @@
 import React from "react";
 
 const JobPage = () => {
-    return <div>JobPage</div>;
+    return <section className="bg-blue-50 px-4 py-6">Job Page</section>;
 };
 
 export default JobPage;

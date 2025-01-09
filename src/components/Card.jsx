@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Card = ({
     children,
@@ -10,13 +10,15 @@ const Card = ({
     // buttonColor = "bg-black",
     // buttonColorHover = "bg-gray-700",
 }) => {
-  return (
-    <>
-        <div className={` ${cardBackgroundColor} p-6 rounded-lg shadow-md `}>
-            {children}
-        </div>
-    </>
-  )
-}
+    return (
+        <>
+            <div
+                className={` ${cardBackgroundColor} p-6 rounded-lg shadow-md `}
+            >
+                {children}
+            </div>
+        </>
+    );
+};
 
-export default Card
+export default Card;

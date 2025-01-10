@@ -14,7 +14,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 
 {
     /* https://www.youtube.com/watch?v=LDB4uaJ87e0&t=154s
-                leave off at 1:32:39 */
+                leave off at 2:09:00 */
 }
 
 const router = createBrowserRouter(
@@ -23,7 +23,7 @@ const router = createBrowserRouter(
             <Route index element={<HomePage />} />
             <Route path="/about" element={<AboutUsPage />} />
             <Route path="/jobs" element={<JobsPage />} />
-            <Route path="/job" element={<JobPage />} />
+            <Route path={`/jobs/:id`} element={<JobPage />} />
             <Route path="*" element={<NotFoundPage />} />
         </Route>
     )

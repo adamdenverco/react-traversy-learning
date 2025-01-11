@@ -9,12 +9,12 @@ import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
 import AboutUsPage from "./pages/AboutUsPage";
 import JobsPage from "./pages/JobsPage";
-import JobPage from "./pages/JobPage";
+import { JobPage, jobLoader } from "./pages/JobPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 {
     /* https://www.youtube.com/watch?v=LDB4uaJ87e0&t=154s
-                leave off at 2:09:00 */
+                leave off at 2:17:00 */
 }
 
 const router = createBrowserRouter(
@@ -23,7 +23,11 @@ const router = createBrowserRouter(
             <Route index element={<HomePage />} />
             <Route path="/about" element={<AboutUsPage />} />
             <Route path="/jobs" element={<JobsPage />} />
-            <Route path={`/jobs/:id`} element={<JobPage />} />
+            <Route
+                path={`/jobs/:id`}
+                element={<JobPage />}
+                loader={jobLoader}
+            />
             <Route path="*" element={<NotFoundPage />} />
         </Route>
     )

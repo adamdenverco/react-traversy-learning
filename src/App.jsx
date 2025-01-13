@@ -9,7 +9,7 @@ import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
 import AboutUsPage from "./pages/AboutUsPage";
 import JobsPage from "./pages/JobsPage";
-import { JobPage, jobLoader } from "./pages/JobPage";
+import JobPage, { jobLoader } from "./pages/JobPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 {

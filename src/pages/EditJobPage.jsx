@@ -1,23 +1,30 @@
 import React from "react";
 import { useState } from "react";
+import { useParams, useLoaderData } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const AddJobPage = ({ addJobSubmit }) => {
-    const [type, setType] = useState("Full-Time");
-    const [title, setTitle] = useState("");
-    const [description, setDescription] = useState("");
-    const [salary, setSalary] = useState("Under $50K");
-    const [location, setLocation] = useState("");
-    const [companyName, setCompanyName] = useState("");
-    const [companyDescription, setCompanyDescription] = useState("");
-    const [contactEmail, setContactEmail] = useState("");
-    const [contactPhone, setContactPhone] = useState("");
+const EditJobPage = ({ updateJobSubmit }) => {
+    const job = useLoaderData();
+    // console.log(job);
+    const { id } = useParams();
+    const [type, setType] = useState(job.type);
+    const [title, setTitle] = useState(job.title);
+    const [description, setDescription] = useState(job.description);
+    const [salary, setSalary] = useState(job.salary);
+    const [location, setLocation] = useState(job.location);
+    const [companyName, setCompanyName] = useState(job.company.name);
+    const [companyDescription, setCompanyDescription] = useState(
+        job.company.description
+    );
+    const [contactEmail, setContactEmail] = useState(job.company.contactEmail);
+    const [contactPhone, setContactPhone] = useState(job.company.contactPhone);
     const navigate = useNavigate();
 
     const submitForm = (e) => {
         e.preventDefault();
-        const newJob = {
+        const updatedJob = {
+            id,
             type,
             title,
             description,
@@ -30,13 +37,13 @@ const AddJobPage = ({ addJobSubmit }) => {
                 contactPhone: contactPhone,
             },
         };
-        console.log(newJob);
+        // console.log(updatedJob);
 
-        addJobSubmit(newJob);
+        updateJobSubmit(updatedJob);
 
-        toast.success("Job added successfully");
+        toast.success("Job update successfully.");
 
-        navigate("/jobs");
+        navigate(`/jobs/${id}`);
     };
 
     return (
@@ -211,7 +218,8 @@ const AddJobPage = ({ addJobSubmit }) => {
                                 name="contact_email"
                                 className="border rounded w-full py-2 px-3"
                                 placeholder="Email address for applicants"
-                                requiredvalue={contactEmail}
+                                required
+                                value={contactEmail}
                                 onChange={(e) =>
                                     setContactEmail(e.target.value)
                                 }
@@ -242,7 +250,7 @@ const AddJobPage = ({ addJobSubmit }) => {
                                 className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
                                 type="submit"
                             >
-                                Add Job
+                                Update Job
                             </button>
                         </div>
                     </form>
@@ -252,4 +260,4 @@ const AddJobPage = ({ addJobSubmit }) => {
     );
 };
 
-export default AddJobPage;
+export default EditJobPage;
